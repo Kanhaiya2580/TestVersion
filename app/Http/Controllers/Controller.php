@@ -14,7 +14,7 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    public function index()
+    public function indexs()
     {
         $version = Version::version(); // Get the version information
         $version = Version::format('compact'); // Get the version information
@@ -25,10 +25,11 @@ class Controller extends BaseController
     }
 
 
-    public function updateGitVersion()
+    public function index()
     {
         // Check if the current branch is "main"
         $currentBranch = trim(shell_exec('git rev-parse --abbrev-ref HEAD'));
+        dd($currentBranch);
         if ($currentBranch !== 'main') {
             return;
         }
