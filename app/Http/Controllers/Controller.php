@@ -29,13 +29,13 @@ class Controller extends BaseController
     {
         // Check if the current branch is "main"
         $currentBranch = trim(shell_exec('git rev-parse --abbrev-ref HEAD'));
-        dd($currentBranch);
         if ($currentBranch !== 'main') {
             return;
         }
 
         // Generate the new version
-        Artisan::call('version:commit');
+        $res = Artisan::call('version:commit');
+        dd($currentBranch, $res);
 
         // Push the new version tag to Git
         $newVersion = trim(shell_exec('git describe --tags --abbrev=0'));
