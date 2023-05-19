@@ -38,8 +38,8 @@ class Controller extends BaseController
         // $version = Version::version(); // Get the version information
         $version = Version::format('compact'); // Get the version information
 
-        // $customVersion = ("v" . $major . "." . $minor . "." . $patch);
-        // dd($customVersion, $version, $major, $minor, $patch);
+        $customVersion = ("v" . $major . "." . $minor . "." . $patch);
+        dd($customVersion, $version, $major, $minor, $patch);
         dd($currentBranch);
         // Generate the new version
         $res = Artisan::call('version:commit');
