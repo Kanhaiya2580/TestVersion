@@ -4,10 +4,10 @@ current:
   label: v
   major: 1
   minor: 0
-  patch: 1
+  patch: 17
   prerelease: null
   buildmetadata: null
-  commit: '100007'
+  commit: '100008'
   timestamp:
     mode: git-remote
     year: null
