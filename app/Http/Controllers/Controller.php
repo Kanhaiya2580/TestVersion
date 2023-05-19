@@ -32,7 +32,7 @@ class Controller extends BaseController
         if ($currentBranch != 'main') {
             return;
         }
-        // $major = Version::major();
+        $major = Version::major();
         $minor = Version::minor();
         $patch = Version::patch(); // Get the version information
         // $version = Version::version(); // Get the version information
