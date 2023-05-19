@@ -34,7 +34,7 @@ class Controller extends BaseController
         }
         $major = Version::major();
         $minor = Version::minor();
-        // $patch = Version::patch(); // Get the version information
+        $patch = Version::patch(); // Get the version information
         // $version = Version::version(); // Get the version information
         // $version = Version::format('compact'); // Get the version information
 
