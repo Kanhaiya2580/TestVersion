@@ -36,7 +36,7 @@ class Controller extends BaseController
         $minor = Version::minor();
         $patch = Version::patch(); // Get the version information
         // $version = Version::version(); // Get the version information
-        $version = Version::format('compact'); // Get the version information
+        // $version = Version::format('compact'); // Get the version information
 
         $customVersion = ("v" . $major . "." . $minor . "." . $patch);
         dd($customVersion, $version, $major, $minor, $patch);
